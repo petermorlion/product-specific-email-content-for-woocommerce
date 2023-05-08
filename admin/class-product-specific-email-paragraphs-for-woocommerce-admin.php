@@ -133,7 +133,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Admin {
 					$product_specific_email_paragraph = '';
 				}
 
-				wp_editor( $product_specific_email_paragraph, 'product_specific_email_paragraph', array(
+				wp_editor( stripslashes($product_specific_email_paragraph), 'product_specific_email_paragraph', array(
 					'textarea_name' => 'product_specific_email_paragraph'
 				) );
 
