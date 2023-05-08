@@ -100,4 +100,32 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 
 	}
 
+	/**
+	 * Customize the order details in the email.
+	 *
+	 * @since    1.0.0
+	 */
+	public function email_order_details($order, $sent_to_admin, $plain_text, $email) {
+		if ($sent_to_admin) {
+			return;
+		}
+
+		try {
+			$items = $order->get_items();
+			foreach ($items as $item) {
+				$data = $item->get_data();
+				$product_id = $data["product_id"];
+				$product = new WC_Product($product_id);
+				$product_specific_email_paragraphs = $product->get_meta('product_specific_email_paragraph', true, 'view');
+				?><h2><?php echo $product->get_title(); ?></h2><?php
+				echo wpautop($product_specific_email_paragraphs);
+			}
+		} catch (Exception $e) {
+			error_log($e);
+			?>
+			<p><?php _e('Something went wrong while adding more info to this email.', 'product-specific-email-paragraphs'); ?></p>
+			<?php
+		}
+	}
+
 }
