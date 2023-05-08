@@ -124,6 +124,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Admin {
 		?>
 		<div id="product_specific_email_paragraphs" class="panel woocommerce_options_panel hidden">
 			<div class="product_specific_email_paragraph_editor">
+				<p><?php _e('help_text', 'product-specific-email-paragraphs'); ?></p>
 				<?php
 
 				global $post;
