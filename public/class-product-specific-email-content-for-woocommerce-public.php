@@ -6,8 +6,8 @@
  * @link       https://redstar.be
  * @since      1.0.0
  *
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
- * @subpackage Product_Specific_Email_Paragraphs_For_Woocommerce/public
+ * @package    Product_Specific_Email_Content_For_Woocommerce
+ * @subpackage Product_Specific_Email_Content_For_Woocommerce/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
- * @subpackage Product_Specific_Email_Paragraphs_For_Woocommerce/public
+ * @package    Product_Specific_Email_Content_For_Woocommerce
+ * @subpackage Product_Specific_Email_Content_For_Woocommerce/public
  * @author     Peter Morlion <peter.morlion@gmail.com>
  */
-class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
+class Product_Specific_Email_Content_For_Woocommerce_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Product_Specific_Email_Paragraphs_For_Woocommerce_Loader as all of the hooks are defined
+		 * defined in Product_Specific_Email_Content_For_Woocommerce_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Product_Specific_Email_Paragraphs_For_Woocommerce_Loader will then create the relationship
+		 * The Product_Specific_Email_Content_For_Woocommerce_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/product-specific-email-paragraphs-for-woocommerce-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/product-specific-email-content-for-woocommerce-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Product_Specific_Email_Paragraphs_For_Woocommerce_Loader as all of the hooks are defined
+		 * defined in Product_Specific_Email_Content_For_Woocommerce_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Product_Specific_Email_Paragraphs_For_Woocommerce_Loader will then create the relationship
+		 * The Product_Specific_Email_Content_For_Woocommerce_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/product-specific-email-paragraphs-for-woocommerce-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/product-specific-email-content-for-woocommerce-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
@@ -116,14 +116,14 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 				$data = $item->get_data();
 				$product_id = $data["product_id"];
 				$product = new WC_Product($product_id);
-				$product_specific_email_paragraphs = $product->get_meta('product_specific_email_paragraph', true, 'view');
+				$product_specific_email_content = $product->get_meta('product_specific_email_content', true, 'view');
 				?><h2><?php echo $product->get_title(); ?></h2><?php
-				echo nl2br(stripslashes($product_specific_email_paragraphs));
+				echo nl2br(stripslashes($product_specific_email_content));
 			}
 		} catch (Exception $e) {
 			error_log($e);
 			?>
-			<p><?php _e('Something went wrong while adding more info to this email.', 'product-specific-email-paragraphs-for-woocommerce'); ?></p>
+			<p><?php _e('Something went wrong while adding more info to this email.', 'product-specific-email-content-for-woocommerce'); ?></p>
 			<?php
 		}
 	}

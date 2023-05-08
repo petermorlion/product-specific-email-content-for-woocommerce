@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Specific Email Paragraphs for WooCommerce\n"
+"Project-Id-Version: Product Specific Email Content for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-08 12:59+0000\n"
 "PO-Revision-Date: 2023-05-08 14:56+0200\n"
@@ -13,10 +13,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 "X-Loco-Version: 2.5.8; wp-5.9\n"
-"X-Domain: product-specific-email-paragraphs-for-woocommerce\n"
+"X-Domain: product-specific-email-content-for-woocommerce\n"
 
 #. Description of the plugin
-msgid "This plugin allows you to add paragraphs to the order emails per product. This is useful if a purchased product requires some more explanation."
+msgid "This plugin allows you to add content to the order emails per product. This is useful if a purchased product requires some more explanation."
 msgstr "Met deze plugin kan je per product text toevoegen aan de bestellingsmail. Dit is handig wanneer een aangekocht product wat meer uitleg vergt."
 
 #. URI of the plugin
@@ -29,7 +29,7 @@ msgid "Peter Morlion"
 msgstr ""
 
 #. Name of the plugin
-msgid "Product Specific Email Paragraphs for WooCommerce"
+msgid "Product Specific Email Content for WooCommerce"
 msgstr ""
 
 msgid "Notes"

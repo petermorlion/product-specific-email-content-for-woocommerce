@@ -9,8 +9,8 @@
  * @link       https://redstar.be
  * @since      1.0.0
  *
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
- * @subpackage Product_Specific_Email_Paragraphs_For_Woocommerce/includes
+ * @package    Product_Specific_Email_Content_For_Woocommerce
+ * @subpackage Product_Specific_Email_Content_For_Woocommerce/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
- * @subpackage Product_Specific_Email_Paragraphs_For_Woocommerce/includes
+ * @package    Product_Specific_Email_Content_For_Woocommerce
+ * @subpackage Product_Specific_Email_Content_For_Woocommerce/includes
  * @author     Peter Morlion <peter.morlion@gmail.com>
  */
-class Product_Specific_Email_Paragraphs_For_Woocommerce {
+class Product_Specific_Email_Content_For_Woocommerce {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Product_Specific_Email_Paragraphs_For_Woocommerce_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Product_Specific_Email_Content_For_Woocommerce_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -67,12 +67,12 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PRODUCT_SPECIFIC_EMAIL_PARAGRAPHS_FOR_WOOCOMMERCE_VERSION' ) ) {
-			$this->version = PRODUCT_SPECIFIC_EMAIL_PARAGRAPHS_FOR_WOOCOMMERCE_VERSION;
+		if ( defined( 'PRODUCT_SPECIFIC_EMAIL_CONTENT_FOR_WOOCOMMERCE_VERSION' ) ) {
+			$this->version = PRODUCT_SPECIFIC_EMAIL_CONTENT_FOR_WOOCOMMERCE_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'product-specific-email-paragraphs-for-woocommerce';
+		$this->plugin_name = 'product-specific-email-content-for-woocommerce';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Product_Specific_Email_Paragraphs_For_Woocommerce_Loader. Orchestrates the hooks of the plugin.
-	 * - Product_Specific_Email_Paragraphs_For_Woocommerce_i18n. Defines internationalization functionality.
-	 * - Product_Specific_Email_Paragraphs_For_Woocommerce_Admin. Defines all hooks for the admin area.
-	 * - Product_Specific_Email_Paragraphs_For_Woocommerce_Public. Defines all hooks for the public side of the site.
+	 * - Product_Specific_Email_Content_For_Woocommerce_Loader. Orchestrates the hooks of the plugin.
+	 * - Product_Specific_Email_Content_For_Woocommerce_i18n. Defines internationalization functionality.
+	 * - Product_Specific_Email_Content_For_Woocommerce_Admin. Defines all hooks for the admin area.
+	 * - Product_Specific_Email_Content_For_Woocommerce_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-product-specific-email-paragraphs-for-woocommerce-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-product-specific-email-content-for-woocommerce-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-product-specific-email-paragraphs-for-woocommerce-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-product-specific-email-content-for-woocommerce-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-product-specific-email-paragraphs-for-woocommerce-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-product-specific-email-content-for-woocommerce-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-product-specific-email-paragraphs-for-woocommerce-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-product-specific-email-content-for-woocommerce-public.php';
 
-		$this->loader = new Product_Specific_Email_Paragraphs_For_Woocommerce_Loader();
+		$this->loader = new Product_Specific_Email_Content_For_Woocommerce_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Product_Specific_Email_Paragraphs_For_Woocommerce_i18n class in order to set the domain and to register the hook
+	 * Uses the Product_Specific_Email_Content_For_Woocommerce_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Product_Specific_Email_Paragraphs_For_Woocommerce_i18n();
+		$plugin_i18n = new Product_Specific_Email_Content_For_Woocommerce_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Product_Specific_Email_Paragraphs_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Product_Specific_Email_Content_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -171,7 +171,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Product_Specific_Email_Paragraphs_For_Woocommerce_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Product_Specific_Email_Content_For_Woocommerce_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -204,7 +204,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Product_Specific_Email_Paragraphs_For_Woocommerce_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Product_Specific_Email_Content_For_Woocommerce_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

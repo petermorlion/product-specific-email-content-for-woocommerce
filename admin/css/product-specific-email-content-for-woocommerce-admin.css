@@ -3,11 +3,11 @@
  * included in this file.
  */
 
- .product_specific_email_paragraph_editor {
+ .product_specific_email_content_editor {
     margin: 10px;
  }
 
- #woocommerce-product-data ul.wc-tabs li.product_specific_email_paragraphs_tab a::before {
+ #woocommerce-product-data ul.wc-tabs li.product_specific_email_content_tab a::before {
    font-family: Dashicons;
    content: "\f465"
 }

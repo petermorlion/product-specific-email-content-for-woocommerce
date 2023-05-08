@@ -8,8 +8,8 @@
  * @link       https://redstar.be
  * @since      1.0.0
  *
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
- * @subpackage Product_Specific_Email_Paragraphs_For_Woocommerce/admin/partials
+ * @package    Product_Specific_Email_Content_For_Woocommerce
+ * @subpackage Product_Specific_Email_Content_For_Woocommerce/admin/partials
  */
 ?>
 
