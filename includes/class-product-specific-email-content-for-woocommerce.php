@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://redstar.be
+ * @link       https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * @since      1.0.0
  *
  * @package    Product_Specific_Email_Content_For_Woocommerce
