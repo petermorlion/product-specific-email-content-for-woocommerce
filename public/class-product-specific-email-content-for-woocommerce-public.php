@@ -118,7 +118,12 @@ class Product_Specific_Email_Content_For_Woocommerce_Public {
 				$product = new WC_Product($product_id);
 				$product_specific_email_content = $product->get_meta('product_specific_email_content', true, 'view');
 				?><h2><?php echo $product->get_title(); ?></h2><?php
+
+				do_action('product_specific_email_content_before_content', $item, $product);
+
 				echo nl2br(stripslashes($product_specific_email_content));
+
+				do_action('product_specific_email_content_after_content', $item, $product);
 			}
 		} catch (Exception $e) {
 			error_log($e);

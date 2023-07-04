@@ -4,7 +4,7 @@ Donate link: https://redstar.be
 Tags: woocommerce, email
 Requires at least: 6.1.1
 Tested up to: 6.1.1
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,22 @@ they bought.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Go to your product and you will see a new 'Email' tab under the product data.
 
+== Frequently Asked Questions ==
+
+= Can my other plugin add to the content? =
+
+Yes! There are two actions that you can hook into:
+
+- `product_specific_email_content_before_content`
+- `product_specific_email_content_after_content`
+
+Both accept a two arguments:
+
+- `$item`: the current Order item
+- `$product`: the current Product
+
+With these hooks, you can add extra info before or after the content defined through this plugin.
+
 == Screenshots ==
 
 1. Adding the email text to the product.
@@ -34,5 +50,11 @@ they bought.
 
 == Changelog ==
 
-= 1.0 =
+= 1.2.0 =
+* Add `product_specific_email_content_before_content` and `product_specific_email_content_after_content`
+
+= 1.1.0 =
+* Increase height of editor
+
+= 1.0.0 =
 * Initial version
