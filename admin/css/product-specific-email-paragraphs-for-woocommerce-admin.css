@@ -6,3 +6,8 @@
  .product_specific_email_paragraph_editor {
     margin: 10px;
  }
+
+ #woocommerce-product-data ul.wc-tabs li.product_specific_email_paragraphs_tab a::before {
+   font-family: Dashicons;
+   content: "\f465"
+}
