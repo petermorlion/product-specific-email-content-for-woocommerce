@@ -118,7 +118,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 				$product = new WC_Product($product_id);
 				$product_specific_email_paragraphs = $product->get_meta('product_specific_email_paragraph', true, 'view');
 				?><h2><?php echo $product->get_title(); ?></h2><?php
-				echo wpautop($product_specific_email_paragraphs);
+				echo nl2br(stripslashes($product_specific_email_paragraphs));
 			}
 		} catch (Exception $e) {
 			error_log($e);
