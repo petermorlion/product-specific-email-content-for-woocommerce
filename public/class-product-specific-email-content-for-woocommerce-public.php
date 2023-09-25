@@ -121,7 +121,7 @@ class Product_Specific_Email_Content_For_Woocommerce_Public {
 
 				do_action('product_specific_email_content_before_content', $item, $product);
 
-				echo esc_html(nl2br(stripslashes($product_specific_email_content)));
+				echo wp_kses_post(nl2br(stripslashes($product_specific_email_content)));
 
 				do_action('product_specific_email_content_after_content', $item, $product);
 			}
