@@ -22,7 +22,7 @@
  * @link       https://redstar.be
  * @since      1.0.0
  *
- * @package    Product_Specific_Email_Paragraphs_For_Woocommerce
+ * @package    Product_Specific_Email_Content_For_Woocommerce
  */
 
 // If uninstall not called from WordPress, then exit.
