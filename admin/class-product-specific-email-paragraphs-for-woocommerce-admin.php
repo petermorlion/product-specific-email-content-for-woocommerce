@@ -100,4 +100,45 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Admin {
 
 	}
 
+	/**
+	 * Add product data tab.
+	 *
+	 * @since    1.0.0
+	 */
+	public function add_product_data_tabs($tabs) {
+		$tabs['product_specific_email_paragraphs'] = [
+			'label' => __('Email', 'product-specific-email-paragraphs'),
+			'target' => 'product_specific_email_paragraphs',
+			'priority' => 999
+		];
+
+		return $tabs;
+	}
+
+	/**
+	 * Add product data panel.
+	 *
+	 * @since    1.0.0
+	 */
+	public function add_product_data_panels() {
+		?>
+		<div id="product_specific_email_paragraphs" class="panel woocommerce_options_panel hidden">
+			<div class="product_specific_email_paragraph_editor">
+				<?php
+
+				global $post;
+				$product_specific_email_paragraph = get_post_meta($post->ID, 'product_specific_email_paragraph', true);
+				if (!$product_specific_email_paragraph) {
+					$product_specific_email_paragraph = '';
+				}
+
+				wp_editor( $product_specific_email_paragraph, 'product_specific_email_paragraph', array(
+					'textarea_name' => 'product_specific_email_paragraph'
+				) );
+
+				?>
+			</div>
+		</div>
+		<?php
+	}
 }
