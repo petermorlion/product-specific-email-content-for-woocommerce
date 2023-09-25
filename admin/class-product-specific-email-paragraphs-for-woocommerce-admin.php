@@ -141,4 +141,16 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Admin {
 		</div>
 		<?php
 	}
+
+	/**
+	 * Process the product meta.
+	 *
+	 * @since    1.0.0
+	 */
+	public function process_product_meta($post_id) {
+		$product = wc_get_product($post_id);
+		$product_specific_email_paragraph = isset($_POST['product_specific_email_paragraph']) ? $_POST['product_specific_email_paragraph'] : '';
+		$product->update_meta_data('product_specific_email_paragraph', $product_specific_email_paragraph);
+		$product->save();
+	}
 }
