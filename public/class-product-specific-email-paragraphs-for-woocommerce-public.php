@@ -123,7 +123,7 @@ class Product_Specific_Email_Paragraphs_For_Woocommerce_Public {
 		} catch (Exception $e) {
 			error_log($e);
 			?>
-			<p><?php _e('Something went wrong while adding more info to this email.', 'product-specific-email-paragraphs'); ?></p>
+			<p><?php _e('Something went wrong while adding more info to this email.', 'product-specific-email-paragraphs-for-woocommerce'); ?></p>
 			<?php
 		}
 	}
