@@ -134,7 +134,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 				}
 
 				wp_editor( stripslashes($product_specific_email_content), 'product_specific_email_content', array(
-					'textarea_name' => 'product_specific_email_content'
+					'textarea_name' => 'product_specific_email_content',
+					'editor_height' => 200
 				) );
 
 				?>
