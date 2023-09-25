@@ -138,6 +138,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 					'editor_height' => 200
 				) );
 
+				wp_nonce_field('product_specific_email_content_nonce_' . $post->ID);
+
 				?>
 			</div>
 		</div>
@@ -150,6 +152,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 * @since    1.0.0
 	 */
 	public function process_product_meta($post_id) {
+		check_admin_referer('product_specific_email_content_nonce_' . $post_id);
+
 		$product = wc_get_product($post_id);
 		$product_specific_email_content = isset($_POST['product_specific_email_content']) ? sanitize_textarea_field($_POST['product_specific_email_content']) : '';
 		$product->update_meta_data('product_specific_email_content', $product_specific_email_content);
