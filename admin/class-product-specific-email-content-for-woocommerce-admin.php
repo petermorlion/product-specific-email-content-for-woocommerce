@@ -151,7 +151,7 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 */
 	public function process_product_meta($post_id) {
 		$product = wc_get_product($post_id);
-		$product_specific_email_content = isset($_POST['product_specific_email_content']) ? $_POST['product_specific_email_content'] : '';
+		$product_specific_email_content = isset($_POST['product_specific_email_content']) ? sanitize_textarea_field($_POST['product_specific_email_content']) : '';
 		$product->update_meta_data('product_specific_email_content', $product_specific_email_content);
 		$product->save();
 	}
