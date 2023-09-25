@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://redstar.be
+ * @link       https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * @since      1.0.0
  *
  * @package    Product_Specific_Email_Content_For_Woocommerce

@@ -19,7 +19,7 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       https://redstar.be
+ * @link       https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * @since      1.0.0
  *
  * @package    Product_Specific_Email_Content_For_Woocommerce

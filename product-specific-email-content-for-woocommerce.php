@@ -8,13 +8,13 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://redstar.be
+ * @link              https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * @since             1.0.0
  * @package           Product_Specific_Email_Content_For_Woocommerce
  *
  * @wordpress-plugin
  * Plugin Name:       Product Specific Email Content for WooCommerce
- * Plugin URI:        https://redstar.be
+ * Plugin URI:        https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * Description:       This plugin allows you to add content to the order emails per product. This is useful if a purchased product requires some more explanation.
  * Version:           1.0.0
  * Author:            Peter Morlion
