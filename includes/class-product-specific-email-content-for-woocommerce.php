@@ -155,7 +155,6 @@ class Product_Specific_Email_Content_For_Woocommerce {
 		$plugin_admin = new Product_Specific_Email_Content_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'add_product_data_tabs', 99 );
 		$this->loader->add_action( 'woocommerce_product_data_panels', $plugin_admin, 'add_product_data_panels', 99 );
