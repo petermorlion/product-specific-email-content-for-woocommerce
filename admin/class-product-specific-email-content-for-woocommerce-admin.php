@@ -20,7 +20,8 @@
  * @subpackage Product_Specific_Email_Content_For_Woocommerce/admin
  * @author     Peter Morlion <peter.morlion@gmail.com>
  */
-class Product_Specific_Email_Content_For_Woocommerce_Admin {
+class Product_Specific_Email_Content_For_Woocommerce_Admin
+{
 
 	/**
 	 * The ID of this plugin.
@@ -47,11 +48,11 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct($plugin_name, $version)
+	{
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
 	}
 
 	/**
@@ -59,7 +60,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -73,8 +75,7 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/product-specific-email-content-for-woocommerce-admin.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/product-specific-email-content-for-woocommerce-admin.css', array(), $this->version, 'all');
 	}
 
 	/**
@@ -82,7 +83,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -96,8 +98,7 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/product-specific-email-content-for-woocommerce-admin.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/product-specific-email-content-for-woocommerce-admin.js', array('jquery'), $this->version, false);
 	}
 
 	/**
@@ -105,7 +106,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function add_product_data_tabs($tabs) {
+	public function add_product_data_tabs($tabs)
+	{
 		$tabs['product_specific_email_content'] = [
 			'label' => __('Email', 'product-specific-email-content-for-woocommerce'),
 			'target' => 'product_specific_email_content_panel',
@@ -120,8 +122,9 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function add_product_data_panels() {
-		?>
+	public function add_product_data_panels()
+	{
+?>
 		<div id="product_specific_email_content_panel" class="panel woocommerce_options_panel hidden">
 			<div class="product_specific_email_content_editor">
 				<!-- <p><?php _e('help_text', 'product-specific-email-content-for-woocommerce'); ?></p> -->
@@ -133,17 +136,17 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 					$product_specific_email_content = '';
 				}
 
-				wp_editor( stripslashes($product_specific_email_content), 'product_specific_email_content', array(
+				wp_editor(stripslashes($product_specific_email_content), 'product_specific_email_content', array(
 					'textarea_name' => 'product_specific_email_content',
 					'editor_height' => 200
-				) );
+				));
 
 				wp_nonce_field('product_specific_email_content_nonce_' . $post->ID);
 
 				?>
 			</div>
 		</div>
-		<?php
+<?php
 	}
 
 	/**
@@ -151,7 +154,8 @@ class Product_Specific_Email_Content_For_Woocommerce_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function process_product_meta($post_id) {
+	public function process_product_meta($post_id)
+	{
 		check_admin_referer('product_specific_email_content_nonce_' . $post_id);
 
 		$product = wc_get_product($post_id);
