@@ -173,6 +173,7 @@ class Product_Specific_Email_Content_For_Woocommerce {
 		$plugin_public = new Product_Specific_Email_Content_For_Woocommerce_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action('woocommerce_email_order_details', $plugin_public, 'email_order_details', 10, 4);
+		$this->loader->add_action('before_woocommerce_init', $plugin_public, 'declare_hpos_compatibility', 10, 0);
 
 	}
 

@@ -87,4 +87,15 @@ class Product_Specific_Email_Content_For_Woocommerce_Public {
 		}
 	}
 
+	/**
+	 * Declare HPOS compatibility
+	 *
+	 * @since    1.3.0
+	 */
+	public static function declare_hpos_compatibility() {
+		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', PRODUCT_SPECIFIC_EMAIL_CONTENT_FOR_WOOCOMMERCE_MAIN_FILE, true );
+		}
+	}
+
 }
