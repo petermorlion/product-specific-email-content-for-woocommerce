@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Product Specific Email Paragraphs for WooCommerce ===
 Contributors: petermorlion
 Donate link: https://redstar.be
 Tags: woocommerce, email
