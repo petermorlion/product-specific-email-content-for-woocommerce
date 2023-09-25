@@ -16,7 +16,7 @@
  * Plugin Name:       Product Specific Email Content for WooCommerce
  * Plugin URI:        https://github.com/petermorlion/product-specific-email-content-for-woocommerce
  * Description:       This plugin allows you to add content to the order emails per product. This is useful if a purchased product requires some more explanation.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            Peter Morlion
  * Author URI:        https://redstar.be
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PRODUCT_SPECIFIC_EMAIL_CONTENT_FOR_WOOCOMMERCE_VERSION', '1.1.0' );
+define( 'PRODUCT_SPECIFIC_EMAIL_CONTENT_FOR_WOOCOMMERCE_VERSION', '1.2.0' );
 
 /**
  * The code that runs during plugin activation.
