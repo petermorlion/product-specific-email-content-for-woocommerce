@@ -83,3 +83,4 @@ Develop in Git and on GitHub as normal. Then:
 
 * git svn rebase
 * git svn dcommit
+* git rebase origin/master master
