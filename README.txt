@@ -3,7 +3,7 @@ Contributors: petermorlion
 Donate link: https://redstar.be
 Tags: woocommerce, email
 Requires at least: 6.1.1
-Tested up to: 6.3
+Tested up to: 6.5
 Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,9 @@ With these hooks, you can add extra info before or after the content defined thr
 
 == Changelog ==
 
+= 1.4.0 =
+* Tested with WordPress 6.5
+
 = 1.3.0 =
 * Declare HPOS compatibility
 
@@ -73,3 +76,14 @@ With these hooks, you can add extra info before or after the content defined thr
 
 = 1.0.0 =
 * Initial version
+
+== Workflow ==
+
+Develop in Git and on GitHub as normal. Then:
+
+* git fetch
+* git checkout main
+* git rebase git-svn
+* git svn dcommit
+* git rebase origin/main main
+* git push
