@@ -81,9 +81,5 @@ With these hooks, you can add extra info before or after the content defined thr
 
 Develop in Git and on GitHub as normal. Then:
 
-* git fetch
-* git checkout main
-* git rebase git-svn
+* git svn rebase
 * git svn dcommit
-* git rebase origin/main main
-* git push
